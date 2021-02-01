@@ -3,6 +3,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: cornflowerblue; /* background color? */
 }
 
 html {
@@ -49,6 +50,7 @@ h3 {
 p, li {
   font-size: 1.6rem;
   line-height: 1.5;
+  list-style-type: none;
 }
 
 /* || header layout */
