@@ -3,7 +3,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: cornflowerblue; /* background color? */
 }
 
 html {
@@ -50,7 +49,6 @@ h3 {
 p, li {
   font-size: 1.6rem;
   line-height: 1.5;
-  list-style-type: none;
 }
 
 /* || header layout */
@@ -66,7 +64,7 @@ body > * {
   padding: 1%;
 }
 
-.main, .header, nav, .article, .aside, .footer, section {
+.main, .header, nav, .article, .aside, .footer, .section {
   background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
