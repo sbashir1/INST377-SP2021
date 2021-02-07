@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded' , () => {
     const bird = document.querySelector('.bird')
-    const GameDisplay = document.querySelector(".game-container")
+    const gameDisplay = document.querySelector(".game-container")
     const ground = document.querySelector('.ground')
 
     let birdLeft = 220
@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded' , () => {
         obstacle.style.left = obstacleLeft + 'px'
         obstacle.style.bottom = obstacleBottom + 'px'
 
+        function moveObstacle() {
+            obstacleLeft -= 2
+            obstacle.style.left = obstacleLeft + 'px'
+
+            if (obstacleLeft === -60) {
+                clearInterval(timerId)
+                gameDisplay.removeChild(obstacle)
+            }  
+        }
+        let timerId = setInterval(moveObstacle, 20)
     }
     generateObstacle()
 
