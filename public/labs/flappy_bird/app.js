@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded' , () => {
     const bird = document.querySelector('.bird')
-    const gameDisplay = document.querySelector(".game-container")
+    const gameDisplay = document.querySelector('.game-container')
     const ground = document.querySelector('.ground')
 
     let birdLeft = 220
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded' , () => {
     document.addEventListener('keyup', control)
 
 
-
     function generateObstacle() {
         let obstacleLeft = 500
         let randomHeight = Math.random() * 60
@@ -41,26 +40,26 @@ document.addEventListener('DOMContentLoaded' , () => {
         if (!isGameOver) {
             obstacle.classList.add('obstacle')
             topObstacle.classList.add('topObstacle')
-        }
-        gameDisplay.appendChild(obstacle)
-        gameDisplay.appendChild(topObstacle)
+    }
+    gameDisplay.appendChild(obstacle)
+    gameDisplay.appendChild(topObstacle)
+    obstacle.style.left = obstacleLeft + 'px'
+    topObstacle.style.left = obstacleLeft + 'px' 
+    obstacle.style.bottom = obstacleBottom + 'px'
+    topObstacle.style.bottom = obstacleBottom + gap + 'px'
+
+    function moveObstacle() {
+        obstacleLeft -= 2
         obstacle.style.left = obstacleLeft + 'px'
-        topObstacle.style.left = obstacleLeft + 'px' 
-        obstacle.style.bottom = obstacleBottom + 'px'
-        topObstacle.style.bottom = obstacleBottom + gap + 'px'
+        topObstacle.style.left = obstacleLeft + 'px'
 
-        function moveObstacle() {
-            obstacleLeft -= 2
-            obstacle.style.left = obstacleLeft + 'px'
-            topObstacle.style.left = obstacleLeft + 'px'
-
-            if (obstacleLeft === -60) {
-                clearInterval(timerId)
-                gameDisplay.removeChild(obstacle)
-                gameDisplay.removeChild(topObstacle)
-            }  
-            if (
-                obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
+        if (obstacleLeft === -60) {
+            clearInterval(timerId)
+            gameDisplay.removeChild(obstacle)
+            gameDisplay.removeChild(topObstacle)
+        }  
+        if (
+            obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
                 (birdBottom < obstacleBottom + 153 || birdBottom > obstacleBottom + gap -200)||
                 birdBottom === 0
                 ) {
