@@ -1,2 +1,56 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
+ body {
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+    background-color: #6091C3;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+.portion {
+    height: 150px;
+    width: 100px;
+    background-color: white;
+    top: 50px;
+    right:100px;
+}
+
+img {
+    display:block;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+    left: 7px;
+  }
+
+.arrow-right {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+    right: 7px;
+  }
