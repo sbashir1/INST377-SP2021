@@ -1,16 +1,29 @@
 /* Put your javascript in here */
-const arrow_right = document.querySelector('right');
-const arrow_left = document.querySelector('left');
-let array = document.querySelectorAll('li');
+const arrowRight = document.querySelector('.arrow-right');
+const arrowLeft = document.querySelector('.arrow-left');
+const list1 = document.querySelectorAll('li');
+const array1 = Array.from(list1);
 
-arrow_right.addEventListener('click', (event) => {
+let position = 0;
 
+function moveRight() {
+  array1.forEach((element) => {
+    position -= 110;
+    element.style.left = position + 'px';
+  });
+}
+
+function moveLeft() {
+  array1.forEach((element) => {
+    position += 110;
+    element.style.left = position + 'px';
+  });
+}
+
+arrowRight.addEventListener('click', (event) => {
+  moveRight();
 });
 
-arrow_right.addEventListener('click', (event) => {
-
-});
-
-array.forEach(element => {
-    element
+arrowLeft.addEventListener('click', (event) => {
+  moveLeft();
 });

@@ -9,17 +9,20 @@
 
 ul {
     list-style: none;
+    display: inline-block;
+    position: relative;
 }
 
 li {
     display: inline-block;
+    position: absolute;
 }
 
 .portion {
     height: 100px;
     width: 350px;
     background-color: white;
-    overflow:hidden;
+    transform: translateX(200px);
 }
 
 img {
@@ -28,28 +31,29 @@ img {
 
 .arrow-left {
     position: absolute;
-    top: 60px;
+    top: 100px;
+    left: 205px;
     padding: 0;
     background: #ddd;
     border-radius: 15px;
     border: 1px solid gray;
     font-size: 24px;
     line-height: 24px;
-    color: #444;
+    color: black;
     display: block;
-    left: 7px;
+    z-index: 10;
   }
 
 .arrow-right {
     position: absolute;
-    top: 60px;
+    top: 100px;
+    left: 560px;
     padding: 0;
     background: #ddd;
     border-radius: 15px;
     border: 1px solid gray;
     font-size: 24px;
     line-height: 24px;
-    color: #444;
+    color: black;
     display: block;
-    right: 7px;
   }
