@@ -16,11 +16,10 @@ li {
 }
 
 .portion {
-    height: 150px;
-    width: 100px;
+    height: 100px;
+    width: 350px;
     background-color: white;
-    top: 50px;
-    right:100px;
+    overflow:hidden;
 }
 
 img {
