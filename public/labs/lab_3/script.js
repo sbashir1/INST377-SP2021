@@ -9,6 +9,7 @@ let position = 0;
 function moveRight() {
   array1.forEach((element) => {
     position -= 110;
+    if (position < -500) position = 270;
     element.style.left = position + 'px';
   });
 }
@@ -16,6 +17,7 @@ function moveRight() {
 function moveLeft() {
   array1.forEach((element) => {
     position += 110;
+    if (position > 800) position = 0;
     element.style.left = position + 'px';
   });
 }
