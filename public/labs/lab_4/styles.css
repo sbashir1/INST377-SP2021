@@ -27,7 +27,7 @@ h1 {
 .flex-inner {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch
+    align-items: center;
 }
 
 .flex-outer > li > label,

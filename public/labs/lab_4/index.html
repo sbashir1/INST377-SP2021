@@ -9,47 +9,47 @@
 <body>
     <h1>Saamia Bashir's Lab 4</h1>
     <div class="container">
-        <form>
+        <form action="/api" method="post">
             <ul class="flex-outer">
                 <li>
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name">
+                    <label for="fname">First Name</label>
+                    <input name="fname" type="text" id="fname">
                 </li>
                 <li>
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name">
+                    <label for="lname">Last Name</label>
+                    <input name="lname" type="text" id="lname">
                 </li>
                 <li>
                     <label for="email">Email</label>
-                    <input type="text" id="email">
+                    <input name="email" type="email" id="email">
                 </li>
                 <li>
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone">
+                    <input name="phone" type="tel" id="phone">
                 </li>
                 <li>
-                    <label for="text-field">Text field</label>
-                    <textarea rows="6" id="text-field" placeholder="This is some default message text."></textarea>
+                    <label name="message" for="text-field">Text field</label>
+                    <textarea rows="5" cols="33" name="message" id="text-field" placeholder="This is some default message text."></textarea>
                 </li>
                 <li>
                     <p>Age</p>
                     <ul class="flex-inner">
                         <li>
-                            <input type="checkbox" id="eighteen-to-thirtyfive">
+                            <input name="age-range1" type="checkbox" id="eighteen-to-thirtyfive">
                             <label for="eighteen-to-thirtyfive">18-35</label>   
                         </li>
                         <li>
-                            <input type="checkbox" id="thirtyfive-to-fifty">
+                            <input name="age-range2" type="checkbox" id="thirtyfive-to-fifty">
                             <label for="thirtyfive-to-fifty">35-50</label>
                         </li>    
                         <li>
-                            <input type="checkbox" id="fifty-to-sixtyfive">
+                            <input name="age-range3" type="checkbox" id="fifty-to-sixtyfive">
                             <label for="fifty-to-sixtyfive">50-65</label>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <button type="submit">Submit Form</button>
+                    <button name="submit-button" type="submit" id="submit">Submit Form</button>
                 </li>
             </ul>
         </form>
