@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <title>Saamia Bashir's Lab 5</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="member-names">Saamia Bashir's Lab 5</h1>
+    <form class="userform">
+        <div class="flex-outer">
+        <label for="zip">Search</label>
+        <input type="text" id="zip" name="zip" placeholder="Search zipcodes"></input> 
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+    <ul class="target-list"></ul>
+    <div id="mapid"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
