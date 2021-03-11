@@ -1,16 +1,25 @@
-.column-dimensons {
-    height:400px !important;
-    width:400px !important;
-    left:400px !important;
-}
-
 .leaflet-container {
-    height:400px; 
-    width:400px; 
-    left:-150px;
-    overflow: auto;
+    height: 400px; 
+    width: 400px; 
+    left: 100px;
+    top: 50px;
+    display: flex;
 }
 
-.column-background{
-    background: goldenrod !important;
+
+
+li {
+    height: 150px;
+    width: 430px;
+    margin: 40px;
+    padding:10px 12px;
+    justify-content: space-between;
+    background-color:lightblue;
+    margin: -4px; 
+    margin-bottom: 40px; 
+    margin-top: 20px;
+}
+
+span {
+    display: block;
 }

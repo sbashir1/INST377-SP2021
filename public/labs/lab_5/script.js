@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 function mapInit() {
   // follow the Leaflet Getting Started tutorial here
-  const mymap = L.map('mapid').setView([38.987, -76.9378], 13);
+  const mymap = L.map('mapid').setView([38.987, -76.9378], 12);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -13,8 +13,6 @@ function mapInit() {
   console.log('mymap', mymap);
   return mymap;
 }
-
-// mapInit();
 
 async function dataHandler(mapObjectFromFunction) {
   const form = document.querySelector('.userform');
@@ -41,7 +39,7 @@ async function dataHandler(mapObjectFromFunction) {
     const target = display.slice(0, 5);
     target.forEach((item) => {
       const coord = item.geocoded_column_1.coordinates;
-      console.log('marker coord', coord[0], coord[1])
+      console.log('marker coord', coord[0], coord[1]);
       const marker = L.marker([coord[1], coord[0]]).addTo(mapObjectFromFunction);
       const appendItem = document.createElement('li');
       const html = target.map((place) => (`
@@ -55,19 +53,18 @@ async function dataHandler(mapObjectFromFunction) {
         `));
       if (search.value.length === 0) { html.length = 0; } else html.length = 5;
       targetList.innerHTML = html.join('');
+      console.log(search.value.html);
     });
     console.log(target);
     console.table(target);
 
-    target.forEach((item)) => {
-    const coordinate = item.geocoded_column_1;
-    console.log(coordinate)
-    } 
-
- //   mapObjectFromFunction.panTo([coordinate[1]], coordinate[0], 0);
- //   console.log(target)
- //   console.log(mapObjectFromFunction)
-
+    target.forEach((item) => {
+      const coordinate = item.geocoded_column_1;
+      console.log(coordinate.coordinates[1], coordinate.coordinates[0]);
+      const coord1 = coordinate.coordinates[1];
+      const coord2 = coordinate.coordinates[0];
+      mapObjectFromFunction.panTo([coord1, coord2]);
+    });
   });
 
   search.addEventListener('input', (event) => {
