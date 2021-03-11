@@ -1,0 +1,16 @@
+.column-dimensons {
+    height:400px !important;
+    width:400px !important;
+    left:400px !important;
+}
+
+.leaflet-container {
+    height:400px; 
+    width:400px; 
+    left:-150px;
+    overflow: auto;
+}
+
+.column-background{
+    background: goldenrod !important;
+}
